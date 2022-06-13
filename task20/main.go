@@ -8,7 +8,7 @@ import (
 )
 
 func reverse(value string) {
-	// Convert to rune array
+	// Split by whitespaces
 	splitedValue := strings.Fields(value)
 	// Create builder
 	builder := strings.Builder{}
