@@ -25,7 +25,7 @@ func (c *ChargingCable) InsertInto() {
 	fmt.Println("Cable has been inserted")
 }
 
-// ThreePinsAdapter is interface for using standart cable with ThreePinsSocket
+// ThreePinsAdapter is adapter struct for using standart cable with ThreePinsSocket
 type ThreePinsAdapter struct {
 	*ChargingCable
 }
