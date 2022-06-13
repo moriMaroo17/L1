@@ -6,11 +6,13 @@ import (
 )
 
 func findDubles(value string) bool {
-	value = strings.ToLower(value)
-	for idx, char := range value {
-		if result := strings.Contains(value[idx+1:], string(char)); result {
-			return !result
+	runeValue := []rune(strings.ToLower(value))
+	chars := make(map[rune]struct{})
+	for _, char := range runeValue {
+		if _, ok := chars[char]; ok {
+			return !ok
 		}
+		chars[char] = struct{}{}
 	}
 	return true
 }
