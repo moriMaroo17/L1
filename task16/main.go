@@ -9,7 +9,7 @@ func quickSort(arr []int) []int {
 	}
 	// Recursive case
 	var less, greater []int
-	// Кeference element selection
+	// Reference element selection
 	pivot := arr[0]
 	for _, item := range arr[1:] {
 		if item < pivot {
